@@ -28,6 +28,11 @@
     ];
   };
 
+  virtualisation.docker = {
+    enable = true;
+    storageDriver = "btrfs";
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
@@ -79,7 +84,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hana = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ for the user.
     home = "/home/hana";
     shell = pkgs.zsh;
     packages = with pkgs; [
