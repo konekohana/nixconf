@@ -172,7 +172,10 @@
     gimp
     git
     htop
+    file
+    fluffychat
     difftastic
+    powertop
     gnupg
     gnome-tweaks
     gnome-terminal
