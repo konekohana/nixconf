@@ -18,9 +18,13 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-openvpn
+    ];
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Prague";
@@ -79,6 +83,45 @@
     packages = with pkgs; [
       tree
     ];
+  };
+
+  # NTK vpn
+  environment.etc = let
+    conn = (pkgs.formats.ini {}).generate "NTK.nmconnection" {
+      connection = {
+        id = "NTK";
+        uuid = "1dae7053-5c20-46e4-b966-bc7dba8947ce";
+        type = "vpn";
+        autoconnect = false;
+        permissions = "user:hana:";
+      };
+
+      vpn = {
+        ca = "${./NTK-ca.pem}";
+        challenge-response-flags = 2;
+        cipher = "AES-128-CBC";
+        connection-type = "password";
+        data-ciphers = "AES-128-CBC";
+        dev = "tun";
+        dev-type = "tun";
+        password-flags = "1";
+        remote = "vpn.techlib.cz:1194";
+        remote-cert-tls = "server";
+        username = "volkuh@ADMIN";
+        service-type = "org.freedesktop.NetworkManager.openvpn";
+      };
+
+      ipv4.method = "auto";
+      ipv6 = {
+        addr-gen-mode = "default";
+        method = "auto";
+      };
+    };
+  in {
+    "NetworkManager/system-connections/${conn.name}" = {
+      source = conn;
+      mode = "0600";
+    };
   };
 
   programs.firefox.enable = true;
