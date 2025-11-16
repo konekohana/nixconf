@@ -18,7 +18,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.binfmt.emulatedSystems = ["aarch64-linux"];
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "peony"; # Define your hostname.
 
   networking.networkmanager = {
     enable = true;

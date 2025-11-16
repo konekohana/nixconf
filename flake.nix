@@ -20,7 +20,7 @@
     home-manager,
     ...
   }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.peony = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit nixpkgs;};
       system = "x86_64-linux";
       modules = [
