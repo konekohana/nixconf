@@ -16,11 +16,6 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
-  hardware.wirelessRegulatoryDatabase = true;
-  boot.extraModprobeConfig = ''
-    options cfg80211 ieee80211_regdom="CS"
-  '';
-
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
