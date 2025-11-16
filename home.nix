@@ -145,6 +145,10 @@
         command = "alejandra";
         arguments = ["--quiet" "--"];
       };
+      languages."Plain Text" = {
+        ensure_final_newline_on_save = false;
+        format_on_save = "off";
+      };
     };
   };
 
