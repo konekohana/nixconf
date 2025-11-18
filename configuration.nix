@@ -176,6 +176,9 @@
     cargo
     rustc
     gcc
+    pv
+    nix-index
+    lz4
     vim
     wget
     vscode
