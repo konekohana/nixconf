@@ -194,6 +194,7 @@
     gnomeExtensions.freon
     gnomeExtensions.launch-new-instance
     gnomeExtensions.system-monitor-next
+    gnumake
     gnuplot
     spotify
     jq
