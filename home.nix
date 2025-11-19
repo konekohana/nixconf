@@ -129,7 +129,13 @@
 
   programs.zed-editor = {
     enable = true;
-    extraPackages = with pkgs; [alejandra nil package-version-server rust-analyzer];
+    extraPackages = with pkgs; [
+      alejandra
+      nil
+      package-version-server
+      rust-analyzer
+      ruff
+    ];
     extensions = ["nix" "toml"];
     userSettings = {
       edit_predictions.mode = "subtle";
