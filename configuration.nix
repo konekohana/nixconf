@@ -1,6 +1,13 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+# todo
+# htop config (home manager)
+#   show path name by default (can be switched using the `p` key when htop is running)
+#   https://github.com/htop-dev/htop/issues/519#issuecomment-775492551
+# display calibration https://wiki.archlinux.org/title/Framework_Laptop_13_(AMD_Ryzen_7040_Series)#Display
+# easyeffects
+#   https://wiki.archlinux.org/title/Framework_Laptop_13_(AMD_Ryzen_7040_Series)#Speakers
+#   https://autoeq.app/
+#   basically I want to copy the easyeffects setup I had in Arch
+# fwupd https://wiki.archlinux.org/title/Framework_Laptop_13_(AMD_Ryzen_7040_Series)#Firmware
 {pkgs, ...}: {
   imports = [
     # Include the results of the hardware scan.
