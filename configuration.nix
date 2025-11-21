@@ -236,6 +236,8 @@
     rustc
     gcc
     pv
+    tig
+    obsidian
     nix-index
     lz4
     vim
