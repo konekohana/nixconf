@@ -131,6 +131,7 @@
     enable = true;
     extraPackages = with pkgs; [
       alejandra
+      clang-tools # for clangd
       nil
       package-version-server
       rust-analyzer
