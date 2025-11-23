@@ -269,6 +269,7 @@
     powertop
     nixd
     element-desktop
+    vlc
     webcord
     wifi-qr
     zsh
