@@ -17,10 +17,15 @@
       logo = {
         source = "${./lix-logo.txt}";
         type = "file";
+        padding = {
+          top = 1;
+          left = 3;
+          right = 3;
+        };
         color = {
-          # The original logo is themed after the lesbian flag and looks great
-          # on a light background, but I had to desaturate the colors a bit
-          # for it to look good in terminal as well.
+          # The original Lix logo is themed after the lesbian flag and looks
+          # great on a light background, but I had to desaturate the colors
+          # a bit for it to look good in terminal as well.
           "1" = "#d362a4"; #d362a4
           "2" = "#d54620"; #d52d00
           "3" = "#a3206e"; #a30262
