@@ -42,10 +42,6 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-  # Enable the GNOME Desktop Environment.
-  #services.xserver.displayManager.gdm.enable = true;
-  #services.xserver.desktopManager.gnome.enable = true;
-
   services.displayManager.gdm = {
     enable = true;
     wayland = true;
@@ -59,14 +55,6 @@
       experimental-features=['scale-monitor-framebuffer']
     '';
   };
-
-  # todo learn what exactly the services.xserver options
-  # do, because… I don't run X server at all afaik?
-  services.xserver.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "us";
-  services.xserver.xkb.options = "eurosign:e,caps:escape,grp:win_space_toggle";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
