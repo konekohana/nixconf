@@ -12,7 +12,7 @@
   imports = [
     ./network.nix
     ./syncthing.nix
-    ./hardware-configuration.nix
+    ./hardware.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
