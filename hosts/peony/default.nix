@@ -115,6 +115,7 @@
     rustc
     gcc
     pv
+    ffmpeg-full # todo find out the difference between this and ffmpeg
     tig
     obsidian
     nix-index
