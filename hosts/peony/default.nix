@@ -19,8 +19,6 @@
 
   nix.channel.enable = false; # remove nix-channel related tools & configs, we use flakes instead.
 
-  nixpkgs.config.permittedInsecurePackages = ["electron-36.9.5"];
-
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
