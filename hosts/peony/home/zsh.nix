@@ -33,6 +33,7 @@
       #cargo = "cargo mommy";
       gdc = "git diff --cached";
       gsh = "git show --ext-diff";
+      cd = "echo \"Hi Kimmy!\"; cd";
       cp = "cp --reflink=auto";
       hddlist = ''printf "/dev/%s \n" $(lsblk -J -o name,rota | jq -r ".blockdevices[] | select(.rota).name")'';
       hddstate = "sudo hdparm -C $(hddlist)";
