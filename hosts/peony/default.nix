@@ -121,6 +121,9 @@
     pv
     ffmpeg-full # todo find out the difference between this and ffmpeg
     tig
+    moreutils
+    easyeffects
+    libreoffice
     obsidian
     nix-index
     lz4
