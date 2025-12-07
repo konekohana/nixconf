@@ -46,6 +46,11 @@
     wayland = true;
   };
 
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "hana";
+  };
+
   services.desktopManager.gnome = {
     enable = true;
     extraGSettingsOverridePackages = [pkgs.mutter];
