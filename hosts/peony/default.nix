@@ -115,55 +115,55 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    python3
-    cargo
-    rustc
-    gcc
-    pv
-    ffmpeg-full # todo find out the difference between this and ffmpeg
-    tig
-    moreutils
-    easyeffects
-    libreoffice
-    obsidian
-    nix-index
-    lz4
-    vim
-    wget
-    vscode
-    discord
     bitwarden-desktop
-    lm_sensors
-    gimp
-    git
-    htop
+    cargo
+    difftastic
+    discord
+    easyeffects
+    element-desktop
+    ffmpeg-full # todo find out the difference between this and ffmpeg
     file
     fluffychat
-    difftastic
-    powertop
-    gnupg
-    gnome-tweaks
-    gnome-terminal
-    gnomeExtensions.executor
+    gcc
+    gimp
+    git
     gnomeExtensions.appindicator
+    gnomeExtensions.executor
     gnomeExtensions.freon
     gnomeExtensions.launch-new-instance
     gnomeExtensions.system-monitor-next
+    gnome-terminal
+    gnome-tweaks
     gnumake
+    gnupg
     gnuplot
-    spotify
-    jq
     hdparm
-    powertop
+    htop
+    jq
+    libreoffice
+    lm_sensors
+    lz4
+    moreutils
     nixd
-    element-desktop
-    vlc
-    webcord
-    wifi-qr
-    zsh
+    nix-index
+    obsidian
+    powertop
+    powertop
+    pv
+    python3
+    rustc
+    spotify
     telegram-desktop
+    tig
+    vim
+    vlc
+    vscode
+    webcord
+    wget
+    wifi-qr
     zed-editor
     zopfli
+    zsh
     (olympus.override {
       celesteWrapper = pkgs.steam-run;
       skipHandlerCheck = true;
