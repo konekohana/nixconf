@@ -142,6 +142,7 @@
     jq
     libreoffice
     lm_sensors
+    losslesscut-bin
     lz4
     moreutils
     nixd
