@@ -3,6 +3,7 @@
     ./fastfetch.nix
     ./zed.nix
     ./zsh.nix
+    scripts/fwpower.nix
   ];
 
   home.username = "hana";
@@ -12,11 +13,6 @@
   # environment.
   home.packages = with pkgs; [
     speedcrunch
-    #(writeShellScriptBin {
-    #  name = "fwpower";
-    #  runtimeInputs = [ lazydocker ]; # what does this do??
-    #  text = builtins.readFile ./lzd;
-    #})
   ];
 
   home.file = {
