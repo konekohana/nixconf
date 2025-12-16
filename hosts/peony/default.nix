@@ -149,7 +149,6 @@
     nix-index
     obsidian
     powertop
-    powertop
     pv
     python3
     rustc
