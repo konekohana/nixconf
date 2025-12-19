@@ -151,6 +151,7 @@
     nixd
     nix-index
     obsidian
+    opencode
     powertop
     pv
     python3
