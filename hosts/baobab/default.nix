@@ -6,6 +6,7 @@
     ./hardware.nix
     ./ssh.nix
     ./tlp.nix
+    ./netdata.nix
   ];
 
   networking.hostName = "baobab";
