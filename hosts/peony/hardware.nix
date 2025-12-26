@@ -16,6 +16,9 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
+  # https://github.com/VirtualBox/virtualbox/issues/188
+  boot.extraModprobeConfig = "options kvm enable_virt_at_load=0";
+
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";

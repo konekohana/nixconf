@@ -31,6 +31,8 @@
     storageDriver = "btrfs";
   };
 
+  virtualisation.virtualbox.host.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Prague";
 
