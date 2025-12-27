@@ -4,6 +4,7 @@
     ./zed.nix
     ./zsh.nix
     scripts/fwpower.nix
+    scripts/train-toolbar.nix
   ];
 
   home.username = "hana";
