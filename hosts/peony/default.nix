@@ -138,6 +138,7 @@
     ffmpeg-full # todo find out the difference between this and ffmpeg
     file
     fluffychat
+    fw-ectool
     gcc
     gimp
     git
@@ -159,6 +160,7 @@
     losslesscut-bin
     lz4
     moreutils
+    ncdu
     nixd
     nix-index
     obsidian
