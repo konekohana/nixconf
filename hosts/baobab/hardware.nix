@@ -12,6 +12,7 @@
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
+  boot.extraModprobeConfig = "options thinkpad_acpi fan_control=1";
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/4ed85244-6709-49db-a4d7-e9f1f27a88b8";
