@@ -22,12 +22,13 @@
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
-    options = ["subvol=nix"];
+    options = ["subvol=nix" "compress=zstd:1"];
   };
 
   fileSystems."/home/hana/btrfs" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
+    options = ["compress=zstd:1"];
   };
 
   boot.initrd.luks.devices."root".device = "/dev/disk/by-uuid/f1f349a7-5b8e-48fe-a497-f8cbdd31e8a8";
