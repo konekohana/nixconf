@@ -31,6 +31,14 @@
     AllowSuspendThenHibernate=no
   '';
 
+  # This is needed because otherwise systemd-logind spams the journal with:
+  # Requested suspend operation not supported, ignoring.
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
