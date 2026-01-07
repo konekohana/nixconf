@@ -9,7 +9,7 @@
     enable = true;
     config = {
       global = {
-        "memory mode" = "ram";
+        "memory mode" = "dbengine";
         "debug log" = "none";
         "access log" = "none";
         "error log" = "syslog";
