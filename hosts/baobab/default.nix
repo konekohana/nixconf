@@ -52,5 +52,7 @@
     extraGroups = ["wheel"];
   };
 
+  nixpkgs.config.allowUnfree = true;
+
   system.stateVersion = "25.05";
 }
