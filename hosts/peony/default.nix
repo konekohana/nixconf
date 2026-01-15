@@ -199,15 +199,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  # Workaround for https://github.com/NixOS/nixpkgs/issues/476071
-  nixpkgs.overlays = [
-    (final: prev: {
-      webcord = prev.webcord.override {
-        buildNpmPackage = prev.buildNpmPackage.override {nodejs = final.nodejs_22;};
-      };
-    })
-  ];
-
   # todo switch to chrony
   services.ntp.enable = true;
 
