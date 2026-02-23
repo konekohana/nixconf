@@ -14,9 +14,6 @@
     extensions = ["nix" "toml"];
     userSettings = {
       edit_predictions.mode = "subtle";
-      features = {
-        edit_prediction_provider = "copilot";
-      };
       theme = {
         mode = "system";
         dark = "Gruvbox Dark";
