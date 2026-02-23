@@ -161,6 +161,7 @@
     vscode
     webcord
     wifi-qr
+    wl-clipboard
     zed-editor
     (olympus.override {
       celesteWrapper = pkgs.steam-run;
