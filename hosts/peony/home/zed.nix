@@ -3,10 +3,12 @@
     enable = true;
     extraPackages = with pkgs; [
       alejandra
+      basedpyright
       clang-tools # for clangd
       nil
       package-version-server
       rust-analyzer
+      rustfmt
       ruff
     ];
     extensions = ["nix" "toml"];
