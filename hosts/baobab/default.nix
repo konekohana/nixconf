@@ -11,14 +11,6 @@
 
   networking.hostName = "baobab";
 
-  environment.systemPackages = with pkgs; [
-    git
-    htop
-    lz4
-    pv
-    vim
-  ];
-
   nix.settings.experimental-features = ["flakes" "nix-command"];
 
   networking.firewall.enable = false;
@@ -50,6 +42,7 @@
     isNormalUser = true;
     description = "hana";
     extraGroups = ["wheel"];
+    shell = pkgs.zsh;
   };
 
   nixpkgs.config.allowUnfree = true;

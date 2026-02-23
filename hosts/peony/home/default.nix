@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   imports = [
+    ../../../modules/home/shell.nix
     ./fastfetch.nix
     ./zed.nix
-    ./zsh.nix
     scripts/fwpower.nix
     scripts/train-toolbar.nix
   ];

@@ -10,11 +10,8 @@
 
   programs.zsh = {
     enable = true;
-    #enableCompletion = true;
-    #autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    # https://nix-community.github.io/home-manager/options.xhtml#opt-programs.zsh.initContent
     initContent = let
       zshConfigEarlyInit = lib.mkOrder 500 ''
         # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -28,9 +25,7 @@
     in
       lib.mkMerge [zshConfigEarlyInit zshConfig];
 
-    # todo move the programs that I need for stuff in here to home manager config
     shellAliases = {
-      #cargo = "cargo mommy";
       gdc = "git diff --cached";
       gsh = "git show --ext-diff";
       cd = "echo \"Hi Kimmy!\"; cd";

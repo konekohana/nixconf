@@ -97,7 +97,6 @@
   };
 
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
   programs.gnupg.agent.enable = true;
 
   programs.vim = {
@@ -128,20 +127,16 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    alejandra
     bitwarden-desktop
     cargo
-    difftastic
     discord
     easyeffects
     element-desktop
     ffmpeg-full # todo find out the difference between this and ffmpeg
-    file
     fluffychat
     fw-ectool
     gcc
     gimp
-    git
     gnomeExtensions.appindicator
     gnomeExtensions.executor
     gnomeExtensions.freon
@@ -149,38 +144,24 @@
     gnomeExtensions.system-monitor-next
     gnome-terminal
     gnome-tweaks
-    gnumake
     gnupg
     gnuplot
-    hdparm
-    htop
-    jq
     libreoffice
     lm_sensors
     losslesscut-bin
-    lz4
-    moreutils
-    ncdu
     nixd
     nix-index
     obsidian
     opencode
-    powertop
-    pv
     python3
     rustc
     spotify
     telegram-desktop
-    tig
-    vim
     vlc
     vscode
     webcord
-    wget
     wifi-qr
     zed-editor
-    zopfli
-    zsh
     (olympus.override {
       celesteWrapper = pkgs.steam-run;
       skipHandlerCheck = true;

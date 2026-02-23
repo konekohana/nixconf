@@ -22,6 +22,7 @@
         system = "x86_64-linux";
         modules = [
           hosts/peony
+          modules/nixos/shell.nix
           nixos-hardware.nixosModules.framework-13-7040-amd
           lix-module.nixosModules.default
           home-manager.nixosModules.home-manager
@@ -29,9 +30,12 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.hana = hosts/peony/home;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
+            home-manager.users.root = {
+              imports = [modules/home/shell.nix];
+              home.username = "root";
+              home.homeDirectory = "/root";
+              home.stateVersion = "24.11";
+            };
           }
         ];
       };
@@ -41,7 +45,20 @@
         system = "x86_64-linux";
         modules = [
           hosts/baobab
+          modules/nixos/shell.nix
           lix-module.nixosModules.default
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.hana = hosts/baobab/home;
+            home-manager.users.root = {
+              imports = [modules/home/shell.nix];
+              home.username = "root";
+              home.homeDirectory = "/root";
+              home.stateVersion = "25.05";
+            };
+          }
         ];
       };
     };
