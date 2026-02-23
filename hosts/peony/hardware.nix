@@ -27,6 +27,12 @@
   # https://github.com/VirtualBox/virtualbox/issues/188
   boot.extraModprobeConfig = "options kvm enable_virt_at_load=0";
 
+  boot.kernelParams = [
+    # https://www.jeffgeerling.com/blog/2025/increasing-vram-allocation-on-amd-ai-apus-under-linux/
+    "ttm.pages_limit=12288000" #48 GB
+    "ttm.page_pool_size=12288000" #48 GB
+  ];
+
   fileSystems."/" = {
     device = "/dev/mapper/root";
     fsType = "btrfs";
