@@ -41,7 +41,7 @@
   programs.git = {
     enable = true;
     settings = {
-      user.name = "Hana Volků";
+      user.name = "Hana Volková";
       user.email = "volek@adamv.cz";
       init.defaultBranch = "main";
       diff.algorithm = "histogram";
