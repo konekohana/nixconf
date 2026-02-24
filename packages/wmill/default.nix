@@ -4,11 +4,11 @@
 }:
 buildNpmPackage rec {
   pname = "windmill-cli";
-  version = "1.642.0";
+  version = "1.644.0";
 
   src = fetchurl {
     url = "https://registry.npmjs.org/windmill-cli/-/windmill-cli-${version}.tgz";
-    hash = "sha256-om35DraPPemA61JLdEJqzOLR9aphi3/Kzgznhvia83o=";
+    hash = "sha256-h6GCR1hpZ0s66teeKagGb4shUlISXRScamELpl39P3g="; # src
   };
 
   sourceRoot = "package";
@@ -17,7 +17,7 @@ buildNpmPackage rec {
     cp ${./package-lock.json} package-lock.json
   '';
 
-  npmDepsHash = "sha256-sa1hJi3ytGTQDm+CPMpd4rZSEO9No0lsh2IdBxMUkRk=";
+  npmDepsHash = "sha256-j7T9xjlU2cgoRVJli0jXXUtq8zOaRR3mbM740CWaX9k=";
 
   dontNpmBuild = true;
 
