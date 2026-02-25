@@ -147,6 +147,7 @@
     gnupg
     gnuplot
     libreoffice
+    llama-cpp-vulkan
     lm_sensors
     losslesscut-bin
     nixd
@@ -157,6 +158,7 @@
     rustc
     spotify
     telegram-desktop
+    thunderbird
     vlc
     vscode
     webcord
