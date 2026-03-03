@@ -129,6 +129,7 @@
   environment.systemPackages = with pkgs; [
     bitwarden-desktop
     cargo
+    cutechess
     discord
     easyeffects
     element-desktop
@@ -156,7 +157,9 @@
     opencode
     python3
     rustc
+    signal-desktop
     spotify
+    stockfish
     telegram-desktop
     thunderbird
     vlc
