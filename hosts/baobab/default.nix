@@ -16,12 +16,12 @@
   networking.firewall.enable = false;
   services.fail2ban.enable = true;
 
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=no
-    AllowHibernation=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
+  systemd.sleep.settings.Sleep = {
+    AllowSuspend = false;
+    AllowHibernation = false;
+    AllowHybridSleep = false;
+    AllowSuspendThenHibernate = false;
+  };
 
   # This is needed because otherwise systemd-logind spams the journal with:
   # Requested suspend operation not supported, ignoring.
