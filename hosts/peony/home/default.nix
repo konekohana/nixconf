@@ -40,6 +40,7 @@
 
   programs.git = {
     enable = true;
+    signing.format = "openpgp";
     settings = {
       user.name = "Hana Volková";
       user.email = "volek@adamv.cz";
