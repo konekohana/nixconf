@@ -160,6 +160,7 @@
     wifi-qr
     wl-clipboard
     (callPackage ../../packages/wmill {})
+    yt-dlp
     zed-editor
     (olympus.override {
       celesteWrapper = pkgs.steam-run;
