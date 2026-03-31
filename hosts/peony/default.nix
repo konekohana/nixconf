@@ -161,6 +161,7 @@
     wl-clipboard
     (callPackage ../../packages/wmill {})
     yt-dlp
+    zathura
     zed-editor
     (olympus.override {
       celesteWrapper = pkgs.steam-run;
