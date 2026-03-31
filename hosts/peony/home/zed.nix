@@ -11,13 +11,13 @@
       rustfmt
       ruff
     ];
-    extensions = ["nix" "toml"];
+    extensions = ["nix" "catppuccin" "toml"];
     userSettings = {
       edit_predictions.mode = "subtle";
       theme = {
         mode = "system";
-        dark = "Gruvbox Dark";
-        light = "Gruvbox Light";
+        dark = "Catppuccin Macchiato";
+        light = "Catppuccin Latte";
       };
       languages.Nix.formatter.external = {
         command = "alejandra";
