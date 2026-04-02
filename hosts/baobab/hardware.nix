@@ -27,7 +27,10 @@
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/ef4aebfd-4885-4b64-8751-3e94d15e8db7";}
+    {
+      device = "/dev/disk/by-uuid/ef4aebfd-4885-4b64-8751-3e94d15e8db7";
+      options = ["discard"];
+    }
   ];
 
   # https://www.kernel.org/doc/html/latest/admin-guide/mm/zswap.html
