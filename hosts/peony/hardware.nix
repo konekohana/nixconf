@@ -31,6 +31,12 @@
     # https://www.jeffgeerling.com/blog/2025/increasing-vram-allocation-on-amd-ai-apus-under-linux/
     "ttm.pages_limit=12288000" #48 GB
     "ttm.page_pool_size=12288000" #48 GB
+
+    # https://www.kernel.org/doc/html/latest/admin-guide/mm/zswap.html
+    "zswap.enabled=1"
+    "zswap.compressor=zstd"
+    "zswap.max_pool_percent=20"
+    "zswap.shrinker_enabled=1"
   ];
 
   fileSystems."/" = {
@@ -56,11 +62,6 @@
   swapDevices = [
     {device = "/dev/disk/by-uuid/af434983-cf64-4040-8eb5-7123aaceb55e";}
   ];
-
-  zramSwap = {
-    enable = true;
-    priority = 100;
-  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
