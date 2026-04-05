@@ -27,7 +27,7 @@
         source = logo;
         type = "file";
         padding = {
-          top = 1;
+          top = 0;
           left = 3;
           right = 3;
         };
@@ -56,16 +56,9 @@
         "cpu"
         "gpu"
         "memory"
-        "swap"
         "display"
         "bios"
         "btrfs"
-        "localip"
-        "publicip"
-        "battery"
-        "bluetooth"
-        "sound"
-        "wifi"
       ];
     };
   };
