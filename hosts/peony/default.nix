@@ -11,6 +11,7 @@
 {pkgs, ...}: {
   imports = [
     ./network.nix
+    ./podman.nix
     ./syncthing.nix
     ./hardware.nix
   ];
@@ -26,17 +27,6 @@
   boot.tmp.useTmpfs = true;
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  virtualisation = {
-    containers.enable = true;
-
-    podman = {
-      enable = true;
-      dockerCompat = true;
-
-      # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = true;
-    };
-  };
 
   virtualisation.virtualbox.host.enable = true;
 
@@ -87,7 +77,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hana = {
     isNormalUser = true;
-    extraGroups = ["wheel" "podman"];
+    extraGroups = ["wheel"];
     home = "/home/hana";
     shell = pkgs.zsh;
     packages = with pkgs; [
