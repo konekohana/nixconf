@@ -8,6 +8,7 @@
     difftastic
     file
     git
+    git-lfs
     gnumake
     hdparm
     htop
