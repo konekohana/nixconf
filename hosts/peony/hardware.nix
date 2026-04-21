@@ -29,8 +29,8 @@
 
   boot.kernelParams = [
     # https://www.jeffgeerling.com/blog/2025/increasing-vram-allocation-on-amd-ai-apus-under-linux/
-    "ttm.pages_limit=12288000" #48 GB
-    "ttm.page_pool_size=12288000" #48 GB
+    "ttm.pages_limit=14336000" #56 GB
+    "ttm.page_pool_size=14336000" #56 GB
 
     # https://www.kernel.org/doc/html/latest/admin-guide/mm/zswap.html
     "zswap.enabled=1"
