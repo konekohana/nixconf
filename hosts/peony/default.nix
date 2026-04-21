@@ -26,9 +26,16 @@
   boot.tmp.useTmpfs = true;
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  virtualisation.docker = {
-    enable = true;
-    storageDriver = "btrfs";
+  virtualisation = {
+    containers.enable = true;
+
+    podman = {
+      enable = true;
+      dockerCompat = true;
+
+      # Required for containers under podman-compose to be able to talk to each other.
+      defaultNetwork.settings.dns_enabled = true;
+    };
   };
 
   virtualisation.virtualbox.host.enable = true;
@@ -80,7 +87,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hana = {
     isNormalUser = true;
-    extraGroups = ["wheel" "docker"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "podman"];
     home = "/home/hana";
     shell = pkgs.zsh;
     packages = with pkgs; [
