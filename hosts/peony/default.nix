@@ -27,7 +27,6 @@
   boot.tmp.useTmpfs = true;
   #boot.kernelPackages = pkgs.linuxPackages_latest;
 
-
   virtualisation.virtualbox.host.enable = true;
 
   # Set your time zone.
