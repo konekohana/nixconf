@@ -143,6 +143,7 @@
     nix-index
     obsidian
     opencode
+    pi-coding-agent
     python3
     rustc
     signal-desktop
