@@ -17,7 +17,7 @@
         }
 
         function process_oebb()   { sed 's|.*|🚄🇦🇹  & km/h|'; }
-        function process_cdwifi() { jq -r '"🚄  \(.speed) km/h  \(.altitude) m"'; }
+        function process_cdwifi() { jq -r '"🚄  \(.speed) km/h  \(.altitude) m  (\(.delay) min)"'; }
         function process_ntk()    { printf '📚 %s 👤' "$(grep -A5 'persons in the library' | grep -oP '<span>\s*\K[0-9]+')"; }
 
         if getdata 'NTK-Staff' 'https://www.techlib.cz/en/' process_ntk; then exit 0; fi
