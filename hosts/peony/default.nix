@@ -139,6 +139,7 @@
     llama-cpp-vulkan
     lm_sensors
     losslesscut-bin
+    mesen
     nixd
     nix-index
     obsidian
