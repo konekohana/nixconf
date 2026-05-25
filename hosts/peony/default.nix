@@ -55,10 +55,7 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-  services.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
+  services.displayManager.gdm.enable = true;
 
   services.displayManager.autoLogin = {
     enable = true;
