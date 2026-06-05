@@ -18,6 +18,10 @@
     ./hardware.nix
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   nix.channel.enable = false; # remove nix-channel related tools & configs, we use flakes instead.
