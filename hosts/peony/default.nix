@@ -12,7 +12,6 @@
   imports = [
     ./docker.nix
     ./network.nix
-    ./nextcloud.nix
     ./syncthing.nix
     ./hardware.nix
   ];
