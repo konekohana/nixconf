@@ -11,7 +11,6 @@
 {pkgs, ...}: {
   imports = [
     ./docker.nix
-    ./llama.nix
     ./network.nix
     ./nextcloud.nix
     ./syncthing.nix
