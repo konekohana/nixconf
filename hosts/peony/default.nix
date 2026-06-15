@@ -62,6 +62,9 @@
     extraGSettingsOverrides = ''
       [org.gnome.mutter]
       experimental-features=['scale-monitor-framebuffer']
+
+      [org.gnome.desktop.interface]
+      gtk-enable-primary-paste=true
     '';
   };
 
