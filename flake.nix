@@ -4,12 +4,14 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
   };
 
   outputs = {
     #self,
     nixpkgs,
     nixos-hardware,
+    nixos-wsl,
     home-manager,
     ...
   }: {
@@ -54,6 +56,29 @@
               home.username = "root";
               home.homeDirectory = "/root";
               home.stateVersion = "25.05";
+            };
+          }
+        ];
+      };
+
+      basil = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit nixpkgs;};
+        system = "x86_64-linux";
+        modules = [
+          nixos-wsl.nixosModules.default
+          hosts/basil
+          modules/nixos/shell.nix
+          modules/nixos/lix.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.nixos = hosts/basil/home;
+            home-manager.users.root = {
+              imports = [modules/home/shell.nix];
+              home.username = "root";
+              home.homeDirectory = "/root";
+              home.stateVersion = "26.05";
             };
           }
         ];
