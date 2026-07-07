@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./docker.nix
     ./zscaler.nix
   ];
 
