@@ -21,6 +21,7 @@
     gcc
     gh
     pi-coding-agent
+    (callPackage ../../packages/bpi {})
   ];
 
   wsl.enable = true;

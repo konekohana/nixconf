@@ -157,6 +157,7 @@
     wifi-qr
     wl-clipboard
     (callPackage ../../packages/wmill {})
+    (callPackage ../../packages/bpi {})
     yt-dlp
     zathura
     zed-editor
