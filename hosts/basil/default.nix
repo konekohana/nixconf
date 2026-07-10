@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./docker.nix
+    ./podman.nix
     ./zscaler.nix
   ];
 
