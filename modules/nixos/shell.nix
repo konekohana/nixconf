@@ -3,6 +3,11 @@
 
   users.users.root.shell = pkgs.zsh;
 
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
+
   environment.systemPackages = with pkgs; [
     alejandra
     difftastic
@@ -19,7 +24,6 @@
     powertop
     pv
     tig
-    vim
     wget
     zopfli
   ];
