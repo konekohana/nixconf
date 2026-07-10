@@ -14,6 +14,11 @@
 
   environment.systemPackages = with pkgs; [
     bubblewrap
+    nodejs
+    python3
+    ruff
+    rustup
+    gcc
     gh
     pi-coding-agent
   ];
