@@ -28,5 +28,7 @@
   wsl.defaultUser = "nixos";
   users.users.nixos.shell = pkgs.zsh;
 
+  nixpkgs.config.allowUnfree = true;
+
   system.stateVersion = "26.05";
 }
