@@ -14,6 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     bubblewrap
+    nix-index
     nodejs
     python3
     ruff
