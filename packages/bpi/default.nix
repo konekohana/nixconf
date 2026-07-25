@@ -139,7 +139,7 @@ writeShellApplication {
           --dev /dev \
           --ro-bind /etc/resolv.conf /etc/resolv.conf \
           --ro-bind /usr /usr \
-          --ro-bind /sbin /sbin \
+          --ro-bind-try /sbin /sbin \
           --ro-bind /nix/store /nix/store \
           --ro-bind /run/current-system/sw /run/current-system/sw \
           --ro-bind /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt \
