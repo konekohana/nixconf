@@ -84,7 +84,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hana = {
     isNormalUser = true;
-    extraGroups = ["wheel"];
+    extraGroups = ["dialout" "wheel"];
     home = "/home/hana";
     shell = pkgs.zsh;
     packages = with pkgs; [
