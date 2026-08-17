@@ -145,6 +145,7 @@ writeShellApplication {
           --ro-bind /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt \
           --ro-bind "$HOME/.gitconfig" "$HOME/.gitconfig" \
           --bind "$HOME/.pi/agent" "$HOME/.pi/agent" \
+          --unsetenv GIT_EXTERNAL_DIFF\
           --unshare-all \
           --share-net \
           --unshare-user \
