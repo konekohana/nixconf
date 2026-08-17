@@ -23,7 +23,9 @@
     rustup
     gcc
     gh
+    patchelf
     pi-coding-agent
+    protobuf
     (callPackage ../../packages/bpi {})
   ];
 
