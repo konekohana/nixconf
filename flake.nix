@@ -5,6 +5,8 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -13,6 +15,7 @@
     nixos-hardware,
     nixos-wsl,
     home-manager,
+    nix-index-database,
     ...
   }: {
     nixosConfigurations = {
@@ -62,10 +65,11 @@
       };
 
       basil = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit nixpkgs;};
+        specialArgs = {inherit nixpkgs nix-index-database;};
         system = "x86_64-linux";
         modules = [
           nixos-wsl.nixosModules.default
+          nix-index-database.nixosModules.default
           hosts/basil
           modules/nixos/shell.nix
           modules/nixos/lix.nix

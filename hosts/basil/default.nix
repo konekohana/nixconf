@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  nix-index-database,
   ...
 }: {
   imports = [
@@ -10,11 +11,12 @@
     ./zscaler.nix
   ];
 
+  programs.nix-index.package = nix-index-database.packages.${pkgs.stdenv.hostPlatform.system}.nix-index-with-small-db;
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
     bubblewrap
-    nix-index
     nodejs
     python3
     ruff
