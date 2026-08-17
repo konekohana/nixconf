@@ -154,6 +154,7 @@
     spotify
     stockfish
     telegram-desktop
+    texliveFull
     thunderbird
     vlc
     vscode
