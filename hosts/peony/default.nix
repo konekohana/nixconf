@@ -11,6 +11,7 @@
 {pkgs, ...}: {
   imports = [
     ./docker.nix
+    ./llama.nix
     ./network.nix
     ./syncthing.nix
     ./hardware.nix
