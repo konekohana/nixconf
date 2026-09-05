@@ -32,6 +32,11 @@
   boot.tmp.useTmpfs = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+  ];
+
   virtualisation.virtualbox.host.enable = true;
 
   # Set your time zone.
