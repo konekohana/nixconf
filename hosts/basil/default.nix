@@ -19,6 +19,7 @@
 
   environment.systemPackages = with pkgs; [
     bubblewrap
+    cargo-insta
     nodejs
     python3
     ruff
