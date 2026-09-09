@@ -23,6 +23,8 @@
     ncdu
     powertop
     pv
+    ripgrep
+    shellcheck
     tig
     wget
     zopfli
