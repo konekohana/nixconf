@@ -130,6 +130,7 @@
     discord
     easyeffects
     element-desktop
+    fceux
     ffmpeg-full # todo find out the difference between this and ffmpeg
     fluffychat
     fw-ectool
