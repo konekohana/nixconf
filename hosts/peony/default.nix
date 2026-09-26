@@ -125,6 +125,7 @@
   environment.systemPackages = with pkgs; [
     bitwarden-desktop
     cargo
+    claude-code
     collabora-desktop
     cutechess
     discord
