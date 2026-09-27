@@ -10,6 +10,7 @@
   ];
 
   networking.hostName = "baobab";
+  networking.hostId = "89bc3a8c"; # chosen by a fair dice roll, guaranteed to be random
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
 
