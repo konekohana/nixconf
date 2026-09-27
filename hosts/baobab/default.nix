@@ -7,6 +7,7 @@
     ./ssh.nix
     ./tlp.nix
     ./netdata.nix
+    ./backup-target.nix
   ];
 
   networking.hostName = "baobab";
