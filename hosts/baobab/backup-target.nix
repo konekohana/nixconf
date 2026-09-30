@@ -42,7 +42,7 @@ in {
       Type = "oneshot";
       RemainAfterExit = true;
     };
-    script = "zfs allow -u syncoid receive:append,create,mount ${target}";
+    script = "zfs allow -u syncoid receive:append,create,mount,hold,release ${target}";
   };
 
   services.sanoid = {
