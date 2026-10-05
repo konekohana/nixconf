@@ -126,7 +126,7 @@
     bitwarden-desktop
     cargo
     claude-code
-    collabora-desktop
+    #collabora-desktop
     cutechess
     discord
     easyeffects
