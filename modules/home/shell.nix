@@ -21,7 +21,7 @@
           source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
         fi
       '';
-      zshConfig = lib.mkOrder 1000 "source ~/.p10k.zsh";
+      zshConfig = lib.mkOrder 1000 "[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh";
     in
       lib.mkMerge [zshConfigEarlyInit zshConfig];
 
