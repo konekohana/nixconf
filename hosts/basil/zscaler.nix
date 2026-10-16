@@ -32,4 +32,19 @@
       -----END CERTIFICATE-----
     ''
   ];
+
+  # Env variables for toolchains that ship their own CA bundle instead of using
+  # the system one.
+  environment.variables = let
+    caBundle = "/etc/ssl/certs/ca-certificates.crt";
+  in {
+    SSL_CERT_FILE = caBundle;
+    NIX_SSL_CERT_FILE = caBundle;
+    CURL_CA_BUNDLE = caBundle;
+    GIT_SSL_CAINFO = caBundle;
+    NODE_EXTRA_CA_CERTS = caBundle;
+    REQUESTS_CA_BUNDLE = caBundle; # python-requests
+    PIP_CERT = caBundle;
+    CARGO_HTTP_CAINFO = caBundle;
+  };
 }
