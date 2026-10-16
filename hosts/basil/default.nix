@@ -8,7 +8,7 @@
   imports = [
     ./docker.nix
     ./podman.nix
-    ./zscaler.nix
+    ../../modules/nixos/zscaler.nix
   ];
 
   programs.nix-index.package = nix-index-database.packages.${pkgs.stdenv.hostPlatform.system}.nix-index-with-small-db;

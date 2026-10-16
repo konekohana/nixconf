@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ../../../modules/home/shell.nix
-    ./git.nix
+    ../../../modules/home/git-work.nix
   ];
 
   home.username = "nixos";

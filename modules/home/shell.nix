@@ -25,15 +25,19 @@
     in
       lib.mkMerge [zshConfigEarlyInit zshConfig];
 
-    shellAliases = {
-      gdc = "git diff --cached";
-      gsh = "git show --ext-diff";
-      cd = "echo \"Hi Kimmy!\"; cd";
-      cp = "cp --reflink=auto";
-      hddlist = ''printf "/dev/%s \n" $(lsblk -J -o name,rota | jq -r ".blockdevices[] | select(.rota).name")'';
-      hddstate = "sudo hdparm -C $(hddlist)";
-      hddstop = "sudo hdparm -y $(hddlist)";
-    };
+    shellAliases =
+      {
+        gdc = "git diff --cached";
+        gsh = "git show --ext-diff";
+        cd = "echo \"Hi Kimmy!\"; cd";
+      }
+      # Hack until I get better separation between Linux and Darwin world I guess
+      // lib.optionalAttrs pkgs.stdenv.hostPlatform.isLinux {
+        cp = "cp --reflink=auto";
+        hddlist = ''printf "/dev/%s \n" $(lsblk -J -o name,rota | jq -r ".blockdevices[] | select(.rota).name")'';
+        hddstate = "sudo hdparm -C $(hddlist)";
+        hddstop = "sudo hdparm -y $(hddlist)";
+      };
 
     history.size = 1000000000000;
     history.ignoreAllDups = true;

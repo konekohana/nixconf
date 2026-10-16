@@ -7,6 +7,8 @@
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -14,6 +16,7 @@
     nixpkgs,
     nixos-hardware,
     nixos-wsl,
+    nix-darwin,
     home-manager,
     nix-index-database,
     ...
@@ -84,6 +87,27 @@
               home.homeDirectory = "/root";
               home.stateVersion = "26.05";
             };
+          }
+        ];
+      };
+    };
+
+    darwinConfigurations = {
+      malus = nix-darwin.lib.darwinSystem {
+        specialArgs = {
+          inherit nixpkgs nix-index-database;
+          username = "hana.volkova";
+        };
+        modules = [
+          nix-index-database.darwinModules.nix-index
+          hosts/malus
+          modules/nixos/lix.nix
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {username = "hana.volkova";};
+            home-manager.users."hana.volkova" = hosts/malus/home;
           }
         ];
       };
