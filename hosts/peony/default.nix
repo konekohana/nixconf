@@ -10,6 +10,7 @@
 # fwupd https://wiki.archlinux.org/title/Framework_Laptop_13_(AMD_Ryzen_7040_Series)#Firmware
 {pkgs, ...}: {
   imports = [
+    ./backup-target.nix
     ./docker.nix
     ./llama.nix
     ./network.nix
