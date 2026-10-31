@@ -10,6 +10,7 @@ in {
   boot.supportedFilesystems.zfs = true;
   boot.zfs.extraPools = [pool];
   boot.zfs.forceImportRoot = false;
+  boot.zfs.requestEncryptionCredentials = false;
 
   services.zfs.autoScrub = {
     enable = true;
