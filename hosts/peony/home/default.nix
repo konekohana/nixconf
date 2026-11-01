@@ -4,11 +4,11 @@
   ...
 }: {
   imports = [
-    ../../../modules/home/shell.nix
     ./fastfetch.nix
     ./zed.nix
     scripts/fwpower.nix
     scripts/train-toolbar.nix
+    ../../../modules/home/shell.nix
   ];
 
   home.username = "hana";

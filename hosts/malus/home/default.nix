@@ -1,7 +1,7 @@
 {username, ...}: {
   imports = [
-    ../../../modules/home/shell.nix
     ../../../modules/home/git-work.nix
+    ../../../modules/home/shell.nix
   ];
 
   home.username = username;

@@ -3,11 +3,11 @@
 #   https://superuser.com/a/1850835
 {pkgs, ...}: {
   imports = [
+    ./backup-target.nix
     ./hardware.nix
+    ./netdata.nix
     ./ssh.nix
     ./tlp.nix
-    ./netdata.nix
-    ./backup-target.nix
   ];
 
   networking.hostName = "baobab";

@@ -12,10 +12,10 @@
   imports = [
     ./backup-target.nix
     ./docker.nix
+    ./hardware.nix
     ./llama.nix
     ./network.nix
     ./syncthing.nix
-    ./hardware.nix
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
