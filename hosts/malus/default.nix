@@ -35,20 +35,22 @@
   };
 
   environment.systemPackages = with pkgs; [
+    asyncapi
     cargo-insta
     gh
     nats-server
     natscli
     nodejs
     pi-coding-agent
+    proto
     protobuf
     python3
     ruff
     rustup
-  ];
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.meslo-lg # For terminal
+    # Mac apps
+    betterdisplay
+    bluesnooze
   ];
 
   # bump only after reading `darwin-rebuild changelog`

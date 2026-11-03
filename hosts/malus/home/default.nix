@@ -1,5 +1,6 @@
 {username, ...}: {
   imports = [
+    ./ghostty.nix
     ../../../modules/home/shell.nix
     ../../../modules/home/git-work.nix
   ];
