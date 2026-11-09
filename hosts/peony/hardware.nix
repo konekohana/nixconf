@@ -24,9 +24,6 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
-  # https://github.com/VirtualBox/virtualbox/issues/188
-  boot.extraModprobeConfig = "options kvm enable_virt_at_load=0";
-
   boot.kernelParams = [
     # https://www.jeffgeerling.com/blog/2025/increasing-vram-allocation-on-amd-ai-apus-under-linux/
     "ttm.pages_limit=14336000" #56 GB
